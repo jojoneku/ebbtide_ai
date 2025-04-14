@@ -1,3 +1,5 @@
+# config.py
+
 MODEL_PATH = "/home/pi/yolo/FINAL_TD-ROBO_0409_V1_ncnn_model"
 THRESHOLD = 0.5
 INFERENCE_SIZE = (640, 640)
@@ -6,3 +8,20 @@ LED_PIN = 18
 PIXHAWK_CONNECTION = "/dev/ttyAMA0"
 PIXHAWK_BAUD = 57600
 SHOW_ALL = True
+
+# Object size & calibration
+KNOWN_TRASH_HEIGHT = 0.24
+FOCAL_LENGTH_PX = 1208
+
+# Decision logic limits
+MAX_COLLECTIONS = 3
+WP_RADIUS_LIMIT = 5.0
+BOAT_RADIUS_LIMIT = 5.0
+MIN_TRASH_DUPLICATE_DISTANCE = 2.0
+
+# Trash collection confirmation
+COLLECTION_CONFIRM_RADIUS = 0.5
+COLLECTION_CONFIRM_DELAY = 3.0
+
+# Default altitude for waypoints
+NAV_ALTITUDE = 0.5

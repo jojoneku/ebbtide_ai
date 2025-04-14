@@ -1,0 +1,29 @@
+opencv-python-headless
+numpy
+torch
+torchvision
+Pillow
+matplotlib
+imutils
+
+# Raspberry Pi GPIO and hardware
+RPi.GPIO
+picamera2  # For Raspberry Pi Camera Module 3
+libcamera
+python-periphery
+
+# Pixhawk MAVLink communication
+pymavlink
+dronekit
+
+# Serial communication
+pyserial
+
+# Optional for REST/API or server interactions
+requests
+
+# Optional for hardware abstraction or Adafruit sensor modules
+Adafruit-Blinka
+Adafruit-PlatformDetect
+Adafruit-GPIO
+Adafruit-PureIO

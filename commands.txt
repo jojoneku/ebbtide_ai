@@ -1,0 +1,15 @@
+python yolo_detect.py --model=yolov8n-trash_ncnn_model --source=picamera0 --resolution=1536x864
+
+yolo export model=yolov8n-trash.pt format=ncnn
+
+wget https://ejtech.io/code/yolo_detect.py
+
+python3 -m venv --system-site-packages venv
+
+libcamera-vid -v -t 0  -s -l -p  --width 640 --height 480 --framerate 30 --inline --listen  -o output_video2.mpeg
+
+python yolo_detectv2.py --model=TDLocal_Roboflowv1_ncnn_model --source=picamera0 --resolution=1536x864 --inference_size=320x320 --skip_frames=2
+
+python yolo_detectv2.py --model=TDLocal_Roboflowv1_ncnn_model --source=picamera0 --resolution=480x480 --inference_size=480x480 --skip_frames=1 --thresh=0.8
+
+python yolo_detectv2_beepcam.py --model=FINAL_TD-ROBO_0409_V1_ncnn_model --source=picamera0 --resolution=480x480 --inference_size=480x480 --thresh=0.5 --show_all --pixhawk_connection=/dev/ttyAMA0

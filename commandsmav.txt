@@ -1,0 +1,10 @@
+#enabling mavproxy
+mkdir -p ~/mavlogs
+chmod 755 ~/mavlogs
+
+# Then run with the logs directory specified
+mavproxy.py --master=/dev/ttyAMA0 --baudrate 57600 --logfile=~/mavlogs/mav.tlog
+Connect /dev/ttyAMA0 source_system=255
+
+04102024 - 
+python yolo_detectv2_beepcam.py --model=FINAL_TD-ROBO_0409_V1_ncnn_model --source=picamera0 --resolution=480x480 --inference_size=480x480 --thresh=0.5 --show_all --pixhawk_connection=/dev/ttyAMA0

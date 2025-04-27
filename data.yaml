@@ -1,0 +1,13 @@
+train: C:\final_trashdetection-ebbtide-080424\train
+val: c:\final_trashdetection-ebbtide-080424\valid
+test: C:\final_trashdetection-ebbtide-080424\test
+
+nc: 3
+names: ['Human', 'NonTrash', 'Trash']
+
+roboflow:
+  workspace: whoone
+  project: final-ebbtide_dataset
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/whoone/final-ebbtide_dataset/dataset/1

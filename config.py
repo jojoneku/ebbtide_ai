@@ -1,6 +1,6 @@
 # config.py
 
-MODEL_PATH = "/home/pi/yolo/FINAL_TD-ROBO_0409_V1_ncnn_model"
+MODEL_PATH = "/home/pi/ebbtide_ai/FINAL_TD-ROBO_0409_V1_ncnn_model"
 THRESHOLD = 0.5
 INFERENCE_SIZE = (640, 640)
 DISPLAY_SIZE = (640, 480)

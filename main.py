@@ -38,7 +38,7 @@ def main():
     threading.Thread(target=pixhawk_module.connection_monitor, daemon=True).start()
 
     model = load_model(MODEL_PATH)
-    labels = model.names
+    labels = ['Human', 'Nontrash', 'Trash']
     fov_degrees = infer_fov_from_mode(DISPLAY_SIZE)
 
     engine = DecisionEngine()
